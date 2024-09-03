@@ -1,13 +1,13 @@
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass'
-import { RenderPixelatedPass } from 'three/examples/jsm/postprocessing/RenderPixelatedPass'
-import { AfterimagePass } from 'three/examples/jsm/postprocessing/AfterImagePass'
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
-import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass'
-import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass.js'
-import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass.js'
-import { Vector2 } from 'three'
+import { EffectComposer } from './three/examples/jsm/postprocessing/EffectComposer'
+import { RenderPass } from './three/examples/jsm/postprocessing/RenderPass'
+import { GlitchPass } from './three/examples/jsm/postprocessing/GlitchPass'
+import { RenderPixelatedPass } from './three/examples/jsm/postprocessing/RenderPixelatedPass'
+import { AfterimagePass } from './three/examples/jsm/postprocessing/AfterImagePass'
+import { UnrealBloomPass } from './three/examples/jsm/postprocessing/UnrealBloomPass'
+import { OutputPass } from './three/examples/jsm/postprocessing/OutputPass'
+import { OutlinePass } from './three/examples/jsm/postprocessing/OutlinePass.js'
+import { FilmPass } from './three/examples/jsm/postprocessing/FilmPass.js'
+import { Vector2 } from './three'
 
 
 

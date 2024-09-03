@@ -5,7 +5,7 @@ export default defineConfig({
         rollupOptions: {
             external: [
                 "./node_modules/three",
-                'three/examples/jsm/postprocessing/EffectComposer',
+                './three/examples/jsm/postprocessing/EffectComposer',
                 './three/examples/jsm/postprocessing/RenderPass',
                 'three/examples/jsm/postprocessing/GlitchPass',
                 'three/examples/jsm/postprocessing/RenderPixelatedPass',

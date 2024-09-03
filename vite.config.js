@@ -12,7 +12,8 @@ export default defineConfig({
                 'three/examples/jsm/postprocessing/UnrealBloomPass',
                 'three/examples/jsm/postprocessing/OutputPass',
                 'three/examples/jsm/postprocessing/OutlinePass.js',
-                'three/examples/jsm/postprocessing/FilmPass.js'
+                'three/examples/jsm/postprocessing/FilmPass.js',
+                "three"
             ]
         },
       },

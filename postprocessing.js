@@ -58,7 +58,7 @@ export function postprocessing(scene, camera, renderer) {
 	return {
 		composer: composer,
 		bloom: bloomPass,
-		after: afterPass,
+		// after: afterPass,
 		outline: outlinePass,
 	}
 }

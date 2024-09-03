@@ -14,7 +14,7 @@ export default defineConfig({
                 './node_modules/three/examples/jsm/postprocessing/OutputPass',
                 './node_modules/three/examples/jsm/postprocessing/OutlinePass.js',
                 './node_modules/three/examples/jsm/postprocessing/FilmPass.js'
-                
+                // nodomodo
             ]
         },
       },

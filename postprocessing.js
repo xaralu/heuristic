@@ -5,7 +5,7 @@ import { RenderPixelatedPass } from './three/examples/jsm/postprocessing/RenderP
 import { AfterimagePass } from './three/examples/jsm/postprocessing/AfterImagePass'
 import { UnrealBloomPass } from './three/examples/jsm/postprocessing/UnrealBloomPass'
 import { OutputPass } from './three/examples/jsm/postprocessing/OutputPass'
-import { OutlinePass } from './three/examples/jsm/postprocessing/OutlinePass.js'
+import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass.js'
 import { FilmPass } from './three/examples/jsm/postprocessing/FilmPass.js'
 import { Vector2 } from './three'
 

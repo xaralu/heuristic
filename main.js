@@ -81,7 +81,6 @@ export let data = ["wip", "contact", "portfolio"];
 
 export function changePopupZ (name, data) {
 	// console.log("meowowwwo: ", name, data)
-
 	let indices = ["7", "6", "5"]
 	let index = data.indexOf(name);	
 	data.unshift(data.splice(index, 1)[0]);
@@ -89,12 +88,9 @@ export function changePopupZ (name, data) {
 	//delete that thing and then add it back. delete one thing
 	console.log("meow: ", data)
 	for (let i = 0; i < data.length; i++) {
-		
 		// console.log(indices[i].toString())
-
 		document.getElementById(data[i]).style.zIndex = indices[i];
 		console.log("RAWR: ", document.getElementById(data[i]).style.zIndex)
-		// really not sure why this isnt working. 
 	}
 }
 
@@ -113,7 +109,7 @@ pixelate(2, 0);
 //updated the hdri a little bit
 const pmremGenerator = new THREE.PMREMGenerator(renderer)
 const hdrLoader = new RGBELoader()
-hdrLoader.load('./ski-green.hdr', function (texture) {
+hdrLoader.load('./sky-green1.hdr', function (texture) {
 	const envMap = pmremGenerator.fromEquirectangular(texture).texture
 	scene.environment = envMap
 	scene.background = envMap
@@ -140,7 +136,7 @@ function init() {
 	const enterbutton = document.getElementById('enterbutton')
 	const crosshair = document.getElementById('crosshair')
 	const deco = document.getElementsByClassName('deco')
-	console.log(deco)
+	// console.log(deco)
 	
 	
 
@@ -201,7 +197,7 @@ function init() {
 				canJump = false;
 				break;
 		}
-		console.log("key pressed")
+		// console.log("key pressed")
 	};
 
 	const onKeyUp = function ( event ) {
@@ -265,22 +261,27 @@ function testOutline() {
 
 function onPointerMove(event) {
 	//primary thing
-	pointer.x = (event.clientX / window.innerWidth) * 2 - 1
-	pointer.y = -(event.clientY / window.innerHeight) * 2 + 1
+	// pointer.x = (event.clientX / window.innerWidth) * 2 - 1
+	pointer.x = 0;
+	pointer.y = 0;
+	// pointer.y = -(event.clientY / window.innerHeight) * 2 + 1
+	// console.log(pointer.x, ", ", pointer.y)
+
+	//now as a separate issue, im not sure why the movement of the camera is not smooth
 
 	raycaster.setFromCamera(pointer, camera)
 	intersects = raycaster.intersectObjects( scene.children );
 	name = intersects[ 0 ].object.userData.name
-	console.log("name: ", name)
-	console.log("intersects.object: ", intersects[ 0 ].object.userData)
+	// console.log("name: ", name)
+	// console.log("intersects.object: ", intersects[ 0 ].object.userData)
 
 	// outline
-	console.log(intersects.length)
+	// console.log(intersects.length)
 	if (intersects.length == 0) {
 		// composer.outline.selectedObjects = [];
 		// console.log("no")
 	} else {
-		console.log("hi")
+		// console.log("hi")
 		if (objNames.indexOf(name) !== -1) {
 			const selectedObject = intersects[ 0 ].object
 			addSelectedObject( selectedObject )
@@ -302,7 +303,7 @@ window.addEventListener('click', function () {
 //html link
 window.addEventListener('keydown', (event) => {
 	// now im thinking that these should all be iframes. that open on the right side. is it ok to make these iframes? 
-	console.log(event.key);
+	// console.log(event.key);
 	if (event.key == "n") {
 		window.open( "https://github.com/xaralu/Moomoo-Saves-Him" )
 	}
@@ -405,9 +406,10 @@ function pixelate(tileSize = 10, sigmaGauss = 2) {
 
 
 function randMessage(){ 
-	let randMessages = ["click anywhere to close popups", "open all the popups!", "hover over any hearts!!"]
+	let randMessages = ["click anywhere to close popups", "open all the popups!", "you better have checked the legal agreement", "watch out for ol benny", "i basically live in here..", "sorry my shit is really messy", "i love having art on my walls"]
 	let randIndex = Math.floor(Math.random() * 4);
 	changeMessage(randMessages[randIndex])
+	
 };
 
 setInterval(randMessage, 10000);
@@ -440,7 +442,7 @@ function animate() {
 
 		const intersections = raycaster.intersectObjects(objects, false)
 
-		const onObject = intersections.length > 0
+		// const onObject = intersections.length > 0
 
 		const delta = (time - prevTime) / 1000
 
@@ -463,14 +465,10 @@ function animate() {
 		controls.moveForward( - velocity.z * delta );
 
 		// controls.getObject().position.y += ( velocity.y * delta ); // new behavior
-
 		// if ( controls.getObject().position.y < 10 ) {
-
 		// 	velocity.y = 0;
 		// 	controls.getObject().position.y = 10;
-
 		// 	canJump = true;
-
 		// }
 
 

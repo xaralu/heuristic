@@ -5,80 +5,52 @@
 
 body {
     font-family: 'semisqueezed', Courier, monospace;
-    font-size: large;
-    padding: 0px;
-    margin: 0px;
-    
+    font-size: 1em;
+    display: flex;
+    width: 50%;
+    position: absolute;
+  top: 25%;
+  left: 25%;
+
 }
-
-
-
 p {
     margin: 0px;
-    font-size: 1.1em;
+    font-size: 1em;
+    line-height: 1.5em;
+    
 }
 /* do i make it like. spquare blocks with gradients that can be activated? yes */
-
-.heuristic-site-title {
-    grid-area: siteTitle;
-    font-size: 3em;
-    /* background-color: red;
-    border-radius: 10px; */
-    width: fit-content;
-}
-
-.button {
-    rotate: 7deg;
-    color: rgb(231, 255, 145);
-    background-color: red;
-    position: absolute;
-    grid-area: button;
-    top: 20px;
-    right: 50px;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: small;
-    width: 100px;
-    p {
-        display: inline;
-    }
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
-}
-
-.xaradesc {
-    grid-area: xara;
-}
-
-#dropMenu {
-    margin-top:10px;
+#right {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 50%;
+}
+#dropMenu {
     justify-content: space-around;
-    width: 100vw;
-    grid-area: menu;
-    
-    
+    align-items: start;
+    width: fit-content;
     #portfolioDrop, #wipDrop, #contactDrop {
-        font-size: larger;
         width: fit-content;
     }
 }
 
-.description {
-    margin-top: 15px;
-    grid-area: desc;
+.desc {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-right: 15px;
+    p {
+        margin-bottom: 1em;
+    }
 }
 
 #scrollContents {
-    grid-area: scrollArea;
-    height: 60vh;
-    width: 99vw;
-    position:relative;
+    width: 400px;
+    height: 300px;
     overflow-y: scroll;
-    border: 3px;
-    border-style: groove;
-    /* margin-right: 20px; */
+    border: 0px;
     display: flex;
+    padding: 0px;
 
     img {
         max-width: 100%;
@@ -108,170 +80,65 @@ p {
         color: rgb(229, 32, 32);
         margin-top: 5px;
         display: inline-block;
+        
     }
-    .dateMedium {
-        font-size: 0.8em;
-        display: inline-block;
-    }
-    
     .description {
         margin-top: 2px;
         font-size: 0.9em;
     }
     img, video {
-        width: 80%;
-        height: auto;
-        margin-left: 10%;
-        margin-right: auto;
+        height: 300px;
+        width: auto;
+        margin-left: auto;
+        margin-right: 0px;
     }
-    #scrollbar {
-        position: sticky;
-        top: 0;
-        right: 0;
-        img{
-            height: 100%;
-            width: 25px;
+    .caption {
+        display: flex;
+    }
+    .dateMedium {
+        text-align: end;
+    }
+    #watermarks {
+        display: flex;
+        gap: 0.5em;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 1em;
+        
+        img {       
+            object-fit: contain;         
+            max-width: 30%;
+            /* height: auto; */
+            margin: 0px;
         }
     }
-    padding: 0px;
 }
-
-.definition {
-    grid-area: def;
-    font-size: 0.8em;
-    margin-top: 5px;
-    text-align: end;
-}
-.desktopContact {
-    display: none;
-    grid-area: contact;
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.copyright {
-    font-size: x-small;
-    display: flex;
-    color: red;
-}
-
-.placeholder {
-    grid-area: place;
-}
-
-/* #ipadLeftColumn {
-    grid-area: menu-heuristic;
-    display: flex; 
-    flex-direction: column;
-} */
-
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent; 
-    
 }
-
-/* break point for: I PAD */
-@media screen and (min-width: 40em) { 
-    /* //gonna use a grid template areas type thing for both of these */
-
+@media only screen and (max-width: 900px) {
     body {
-        font-size: 1.2em;
-        margin: 20px;
-        margin-bottom: 3px;
-        display: grid;
-        grid-template-areas:
-          'siteTitle xara'
-          'menu scrollArea'
-          'desc scrollArea'
-          'def scrollArea'
-          'copy scrollArea';
-        column-gap: 30px;
-        row-gap: 30px;
-        height: 100%;
+      left: 15%;
     }
-    .description {
-        text-align: justify;
-    }
-    #scrollContents {
-        width: 55vw;
-        border-width: 4px;
-        height: 75vh;
-        .description {
-            text-align:left;
-        }
-    }
-    #dropMenu {
-        display: flex;
+  }
+
+@media only screen and (max-width: 600px) {
+    body {
         flex-direction: column;
-        height: 10vh;
-        width: 100%;
-        position: relative;
-        right: 0px;
-        /* left: 0%;
-        bottom: 0%; */
-        text-shadow: 1px;
-        align-items: end;
-        background-size: 100% 100%;
+        padding: 1%;
+        align-items: start;
+        width: 97%;
+        top: 0%;
+        left: 0%;
     }
-    .heuristic-site-title {
-        height: 10vh;
+    .desc {
+        text-align: end;
+       padding-left: 25%;
     }
-    .button {
-        position: absolute;
-        top: 9.5vh;
-        left: 5.5vw;
-        height: 50px;
-        width: 80px;
-        z-index: 1;
-        rotate: -7deg;
-    }
-    
-    .definition {
-        text-align: justify;
-    }
-    .copyright {
-        display: inline;
-    }
-}
-
-/* break point for: COMPUTER */
-@media screen and (min-width: 56em) { 
-    
-
-    body {
-        font-size: 1.6em;
-        margin: 0px;
-        margin-bottom: 3px;
-        display:grid;
-        grid-template-areas:
-          'siteTitle menu'
-          'desc scrollArea'
-          'def scrollArea'
-          'xara scrollArea'
-          'place place';
-        width: 99%;
-    }
-
-    #dropMenu {
-        /* font-size: 4em; */
-        width: 100%;
-    }
-
     #scrollContents {
-        width: 55vw;
-        border-width: 4px;
-        height: 75vh;
-        bottom: 0%;
-        .description {
-            text-align:left;
-        }
+        width: 97vw;
+        border: 0px;
+        height: 50vh;
     }
-
-    .placeholder {
-        background-color: blue;
-        font-size: 0.7em;
-        align-content: center;
-    }  
-}
-/* wait we were gonna have a grid thing */
+  }

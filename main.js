@@ -339,7 +339,7 @@ function pixelate(tileSize = 10, sigmaGauss = 2) {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
   
-	ctx.fillStyle = "rgba(0, 0, 0, 0.842)";
+	ctx.fillStyle = "rgba(0, 0, 0, 0.642)";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
   
 	// only to make the output visible

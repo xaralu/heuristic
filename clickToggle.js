@@ -55,7 +55,7 @@ export function clickToggle() {
 					console.log('visibility array: ', specialNamesToggles)
 					tabManager()
 					if (i == 0 && document.getElementById("wip").style.display == "flex") {
-						changeMessage("works in progress popup toggled")
+						changeMessage("press esc to leave")
 					} else if (i == 1 && document.getElementById("wip").style.display == "flex") {
 						changeMessage("use wasd or arrow keys to move")
 					} else if (i == 2 && document.getElementById("wip").style.display == "flex") {

@@ -57,7 +57,7 @@ export function clickToggle() {
 					if (i == 0 && document.getElementById("wip").style.display == "flex") {
 						changeMessage("works in progress popup toggled")
 					} else if (i == 1 && document.getElementById("wip").style.display == "flex") {
-						changeMessage("portfolio popup toggled")
+						changeMessage("use wasd or arrow keys to move")
 					} else if (i == 2 && document.getElementById("wip").style.display == "flex") {
 						changeMessage("contact info popup toggled")
 					}

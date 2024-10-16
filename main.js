@@ -317,7 +317,7 @@ window.addEventListener('keydown', (event) => {
 		// kitty cat documentation link
 		window.open( "./kitty.html" )
 	}
-	if (event.key == "n") {
+	if (event.key == "g") {
 		// kitty cat video
 		window.open( "https://youtu.be/qOEY1703aeU" )
 	}

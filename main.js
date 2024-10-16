@@ -267,7 +267,6 @@ function onPointerMove(event) {
 	// pointer.y = -(event.clientY / window.innerHeight) * 2 + 1
 	// console.log(pointer.x, ", ", pointer.y)
 
-	//now as a separate issue, im not sure why the movement of the camera is not smooth
 
 	raycaster.setFromCamera(pointer, camera)
 	intersects = raycaster.intersectObjects( scene.children );
@@ -310,10 +309,10 @@ window.addEventListener('keydown', (event) => {
 	// 	window.open( "https://docs.google.com/presentation/d/1Veno8a08tORjJKa1j_Le7i1eOohGiC6FEuTHfTrCPA0/edit#slide=id.p" )
 	//  lowkey might make this one an iframe
 	// }
-	if (event.key == "r") {
-		// radial pond deployement
-		window.open( "./public/flowergalaxy/index.html" )
-	}
+	// if (event.key == "r") {
+	// 	// radial pond deployement
+	// 	window.open( "./public/flowergalaxy/index.html" )
+	// }
 	if (event.key == "j") {
 		// kitty cat documentation link
 		window.open( "./kitty.html" )

@@ -302,22 +302,29 @@ window.addEventListener('click', function () {
 
 //html link
 window.addEventListener('keydown', (event) => {
-	// now im thinking that these should all be iframes. that open on the right side. is it ok to make these iframes? 
-	// console.log(event.key);
+	
 	if (event.key == "n") {
 		window.open( "https://github.com/xaralu/Moomoo-Saves-Him" )
 	}
-	if (event.key == "b") {
-		window.open( "https://docs.google.com/presentation/d/1Veno8a08tORjJKa1j_Le7i1eOohGiC6FEuTHfTrCPA0/edit#slide=id.p" )
-		// lowkey might make this one an iframe. ???? 
-	}
+	// if (event.key == "b") {
+	// 	window.open( "https://docs.google.com/presentation/d/1Veno8a08tORjJKa1j_Le7i1eOohGiC6FEuTHfTrCPA0/edit#slide=id.p" )
+	//  lowkey might make this one an iframe
+	// }
 	if (event.key == "r") {
 		// radial pond deployement
-		window.open( "" )
+		window.open( "./public/flowergalaxy/index.html" )
 	}
 	if (event.key == "j") {
-		// kitty cat documentation iframe
-		window.open( "" )
+		// kitty cat documentation link
+		window.open( "./kitty.html" )
+	}
+	if (event.key == "n") {
+		// kitty cat video
+		window.open( "https://youtu.be/qOEY1703aeU" )
+	}
+	if (event.key == "h") {
+		// audio installation
+		window.open( "https://youtu.be/lo0QZqMPUj8" )
 	}
 });
 

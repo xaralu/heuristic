@@ -315,7 +315,7 @@ window.addEventListener('keydown', (event) => {
 	// }
 	if (event.key == "j") {
 		// kitty cat documentation link
-		window.open( "../public/kitty.html" )
+		window.open( "../kitty.html" )
 	}
 	if (event.key == "g") {
 		// kitty cat video

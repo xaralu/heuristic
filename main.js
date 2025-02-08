@@ -137,8 +137,6 @@ function init() {
 	const crosshair = document.getElementById('crosshair')
 	const deco = document.getElementsByClassName('deco')
 	// console.log(deco)
-	
-	
 
 	enterbutton.addEventListener('click', function () {
 		controls.lock()
@@ -301,7 +299,6 @@ window.addEventListener('click', function () {
 
 //html link
 window.addEventListener('keydown', (event) => {
-	
 	if (event.key == "n") {
 		window.open( "https://github.com/xaralu/Moomoo-Saves-Him" )
 	}
@@ -313,10 +310,10 @@ window.addEventListener('keydown', (event) => {
 	// 	// radial pond deployement
 	// 	window.open( "./public/flowergalaxy/index.html" )
 	// }
-	if (event.key == "j") {
-		// kitty cat documentation link
-		window.open( "../kitty.html" )
-	}
+	// if (event.key == "j") {
+	// 	// kitty cat documentation link
+	// 	window.open( "../kitty.html" )
+	// }
 	if (event.key == "g") {
 		// kitty cat video
 		window.open( "https://youtu.be/qOEY1703aeU" )
@@ -335,6 +332,8 @@ function onWindowResize() {
 	changeMessage("window resized!")
 }
 
+
+//The code within the pixelate function was found on StackOverflow, and I have modified the arguments to fit the aesthetic I was looking for
 function pixelate(tileSize = 10, sigmaGauss = 2) {
 	tileSize = tileSize < 1 ? 1 : tileSize;
 	sigmaGauss = sigmaGauss < 1 ? 1 : sigmaGauss;
@@ -412,7 +411,7 @@ function pixelate(tileSize = 10, sigmaGauss = 2) {
 
 
 function randMessage(){ 
-	let randMessages = ["click anywhere to close popups", "open all the popups!", "you better have checked the legal agreement", "watch out for ol benny", "i basically live in here..", "sorry my shit is really messy", "i love having art on my walls"]
+	let randMessages = ["press esc to exit", "open all the popups!", "you better have checked the legal agreement", "watch out for ol benny", "i basically live in here..", "sorry my shit is really messy", "i love having art on my walls"]
 	let randIndex = Math.floor(Math.random() * 4);
 	changeMessage(randMessages[randIndex])
 	
